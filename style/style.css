@@ -130,7 +130,7 @@ h5 {
 }
 
 #card4 {
-  background-image: url(../../imags/card4.jpg);
+  background-image: url(../imags/card4.jpg);
   overflow: hidden;
   background-size: cover;
 }
