@@ -112,7 +112,7 @@ h5 {
 }
 
 #card1 {
-  background-image: url(../../imags/card1.jpg);
+  background-image: url(../imags/card1.jpg);
   overflow: hidden;
   background-size: cover;
 }

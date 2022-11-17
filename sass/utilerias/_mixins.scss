@@ -51,7 +51,7 @@
 }
 
 @mixin fondo_body {
-    background-image: url(../../imags/catdog.jpg);
+    background-image: url(../imags/catdog.jpg);
     background-repeat:repeat;
     overflow-x: hidden;
 }
@@ -94,7 +94,7 @@
 }
 
 @mixin tarjeta ($imagen) {
-    background-image: url(../../imags/#{"card"+$imagen+".jpg"});
+    background-image: url(../imags/#{"card"+$imagen+".jpg"});
     overflow:hidden;
     background-size:cover;
 }
