@@ -1,0 +1,29 @@
+@use "../utilerias/variables";
+@use "../utilerias/mixins";
+@use "../componentes/carrusel";
+@use "../componentes/efectos";
+@use "../componentes/tarjetas";
+@use "../layout/formulario";
+
+//configuración de la imagen de fonde del body
+body {
+    @include mixins.fondo_body;
+}
+
+// configuración de subtitulo
+h2 {
+    @include mixins.subtitulo;
+}
+
+// Configuracion de direccion de contacto
+.div_p {
+    @include mixins.direccion_contacto;
+}
+
+.main_div_calendar {
+   @include mixins.propiedades_calendario; 
+}
+
+
+
+

@@ -1,0 +1,183 @@
+@use "../utilerias/variables";
+
+
+@mixin propiedades_h1 {
+    font: {
+        family: variables.$h1h2_font;
+    }
+    padding-top: ((variables.$main_size)/10)+px;
+}
+
+@mixin brillo_texto {
+    color: variables.$gradient_maincolor;
+    background: linear-gradient(to right, (variables.$gradient_hardcolor) 0, (variables.$gradient_lightcolor) 10%, (variables.$gradient_hardcolor) 20%);
+    background-position: variables.$cero_size;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@mixin animacion_brillo {
+    animation-fill-mode: forwards;
+    -webkit-text-size-adjust: none;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+@mixin anima($animacion, $tiempo, $metodo, $veces){
+    animation: $animacion $tiempo $metodo $veces;
+}
+
+@mixin navlista_letra {
+    font: {
+        family: variables.$navbar_font;
+    }
+}
+
+@mixin img_navbar {
+    position: relative;
+    top: ((variables.$main_size)/5)+px;
+    display: inline-block;
+}
+
+@mixin subtitulo {
+    font: {
+        family: variables.$h1h2_font;
+    }
+    color:midnightblue;
+    text-align: center;
+    position: relative;
+    padding-top: ((variables.$main_size)/5)+px;
+    padding-bottom: ((variables.$main_size)/5)+px;
+}
+
+@mixin fondo_body {
+    background-image: url(../../imags/catdog.jpg);
+    background-repeat:repeat;
+    overflow-x: hidden;
+}
+
+@mixin foto_galeria {
+    width: ((variables.$main_size)*8)+px;
+    height:((variables.$main_size)*6)+px;
+    margin-left:auto;
+    margin-right: auto;
+}
+
+@mixin texto_fotocarrusel {
+    -webkit-text-stroke: (((variables.$dos_size)/2)+px) variables.$stroke_color;
+    color: variables.$gradient_hardcolor;
+}
+
+@mixin video_galeria {
+    width:((variables.$main_size)*7)+px;
+    height:((variables.$main_size)*5.25)+px;
+    margin-left:auto;
+    margin-right: auto;
+}
+
+@mixin contenedor {
+    margin-top: ((variables.$main_size)/2)+px;
+    margin-bottom: ((variables.$main_size)/5)+px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@mixin propiedades_tarjeta1 {
+    height: ((variables.$main_size)*2.8)+px;
+    border-radius: ((variables.$main_size)/10)+px;
+    box-shadow: -1rem 0 3rem variables.$card_bkgndcolor;
+}
+
+@mixin propiedades_tarjeta2 {
+    position: relative;
+    left: (variables.$cero_size)+px;
+}
+
+@mixin tarjeta ($imagen) {
+    background-image: url(../../imags/#{"card"+$imagen+".jpg"});
+    overflow:hidden;
+    background-size:cover;
+}
+
+@mixin desplaza_transforma ($desplazar, $tiemp, $metod) {
+    transform:translateY($desplazar);
+    transition: $tiemp $metod;
+}
+
+@mixin tarjeta_siguiente {
+    position: relative;
+    left: ((variables.$main_size)/2)+px;
+}
+
+@mixin titulo_tarjeta {
+    color:aquamarine;
+    font: {
+        weight: ((variables.$main_size)*3)+px;
+    }
+    position: absolute;
+    left: ((variables.$main_size)/5)+px;
+    top: (((variables.$dos_size)/2)*3*5)+px;
+}
+
+@mixin tarjeta_barra {
+    position: absolute;
+    top: (variables.$main_size)+px;
+    left: ((variables.$main_size)/5)+px;
+    height: ((variables.$main_size)/20)+px;
+    width: ((variables.$main_size)+50)+px;
+}
+
+@mixin tarjetabarra_vacia {
+    background-color: variables.$cardbar_bkgndcolor;
+    width:100%;
+    height:100%;
+}
+
+@mixin barra_llena {
+    position: absolute;
+    top: (variables.$cero_size)+px;
+    z-index: ((variables.$dos_size)/2)*3;
+    width: (variables.$cero_size)+px;
+    height: 100%;
+    background: variables.$cardbarfilled_bkgndcolor;
+    background: linear-gradient((((variables.$main_size)-10)+deg), variables.$cardbar_gradcolor1 0%, variables.$cardbar_gradcolor2 65%, variables.$cardbar_gradcolor3 100%);
+}
+
+@mixin direccion_contacto {
+    font: {
+        family: 'Oswald', sans-serif;
+        size: 100%; 
+    } 
+    color: variables.$direccion_color;
+    padding: ((variables.$main_size)/5)+px;
+    text-align: center;
+    background-color: variables.$direccion_fondo;
+    opacity: (variables.$dos_size)/4;
+}
+
+@mixin propiedades_formulario {
+    font: {
+        family: 'Oswald', sans-serif;
+        size: 100%;
+    }
+    color: variables.$direccion_color;
+    padding: ((variables.$main_size)/5)+px;
+    width:auto;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: variables.$direccion_fondo;
+    opacity: (variables.$dos_size)/4;
+}
+
+@mixin propiedades_calendario {
+    margin-top: ((variables.$main_size)-70)+px;
+    margin-bottom: ((variables.$main_size)/2)+px;
+    display: flex; 
+    align-content: center;
+    justify-content: center;
+}
+
+@mixin propiedades_footeritem {
+    margin-top: ((variables.$main_size)/5)+px;
+    margin-bottom: ((variables.$main_size)/5)+px;
+}

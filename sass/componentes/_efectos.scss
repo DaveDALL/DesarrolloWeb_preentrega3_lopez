@@ -1,0 +1,59 @@
+@use "../utilerias/variables";
+@use "../utilerias/mixins";
+
+
+// animación del efecto de brillo en el h1
+.btn_shine {
+    @include mixins.brillo_texto;
+
+    @keyframes shine {
+        0% {
+            background-position: (variables.$cero_size);
+          }  
+        60% {
+            background-position: (variables.$main_size*3.6)+px;
+          }  
+        100% {
+            background-position: (variables.$main_size*3.6)+px;
+          }
+    }
+
+    @include mixins.anima(shine, 4s, linear, infinite);
+    @include mixins.animacion_brillo;
+}
+
+//Efecto de soom en las opciones de la navbar
+.zoom {
+    :hover {
+        @keyframes zom {
+            0% {
+              transform: scale(variables.$dos_size/2, variables.$dos_size/2);
+            }
+            50% {
+              transform: scale((variables.$dos_size)-(0.5), (variables.$dos_size)-0.5);
+            }
+            100% {
+              transform: scale(variables.$dos_size/2, variables.$dos_size/2);
+            }
+        }
+        @include mixins.anima (zom, 2s, ease-out, infinite);
+    }
+}
+
+// Efecto de salto en la huellita de perro del logo de la navbar brand
+.box {
+    img {
+        @include mixins.img_navbar;
+
+        @keyframes bounce{
+            100% {
+            top: ((variables.$main_size/5)*-1)+px;
+            }
+        }
+        @include mixins.anima (bounce, 0.3s, ease, infinite alternate);
+    }
+}
+
+
+
+

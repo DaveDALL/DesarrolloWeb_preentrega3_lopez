@@ -1,0 +1,70 @@
+@use "../utilerias/variables";
+@use "../utilerias/mixins";
+@use "../componentes/efectos";
+
+// ajuste de posición de las tarjetas
+.contenedor {
+    @include mixins.contenedor;
+}
+
+// configuración de color de las tarjetas y transicion
+.card {
+    @include mixins.propiedades_tarjeta1;
+    @include mixins.desplaza_transforma (variables.$cero_size, 0.4s, ease-out);
+    @include mixins.propiedades_tarjeta2;
+}
+
+@each $tarjetita in variables.$card_numero {
+    #card#{$tarjetita} {
+        @include mixins.tarjeta($tarjetita);
+    }
+}
+
+//desplazamiento vertical de la tarjeta
+.card:hover {
+    @include mixins.desplaza_transforma (-20px, 0.4s, ease-out);
+
+}
+
+// desplazamiento de la tarjeta del lado derecho
+.card:hover {
+    ~ .card {
+        @include mixins.tarjeta_siguiente;
+        @include mixins.desplaza_transforma(variables.$cero_size, 0.4s, ease-out);
+    }
+}
+
+// Color posicion tamaño del Letrero de tarjeta
+.tittle {
+    @include mixins.titulo_tarjeta;
+}
+
+// posicion y tamaño de la barra interna del la tarjeta
+.bar {
+    @include mixins.tarjeta_barra;
+}
+
+// relleno de la barra cuando esta vacia
+.emptybar {
+    @include mixins.tarjetabarra_vacia;
+}
+
+// relleno de la barra
+.filledbar {
+    @include mixins.barra_llena;
+    @include mixins.desplaza_transforma (variables.$cero_size, 0.6s, ease-out);
+}
+
+// ajuste de la tarjeta al hacer hover
+.card:hover {
+    .filledbar {
+        width: ((variables.$main_size)+(50))+px;
+        @include mixins.desplaza_transforma (variables.$cero_size, 0.4s, ease-out);
+    }
+}
+.card:hover {
+    .stroke {
+        stroke-dashoffset: variables.$main_size;
+         @include mixins.desplaza_transforma (variables.$cero_size, 0.6s, ease-out);
+    }
+}

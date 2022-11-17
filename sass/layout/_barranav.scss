@@ -1,0 +1,19 @@
+@use "../utilerias/variables";
+@use "../utilerias/mixins";
+@use "../componentes/efectos";
+
+nav {
+    margin-top: ((variables.$main_size)/2)+px;
+}
+
+// Tipo de letra para la lista de la navbar
+.ul_li_specs {
+    @include mixins.navlista_letra;
+}
+
+// Se cambia color del tipo de letra de la navbar
+.navbar-nav .nav-link.active, .navbar-nav .show > .nav-link {
+    color: variables.$gradient_hardcolor;
+}
+
+

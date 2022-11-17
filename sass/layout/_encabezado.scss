@@ -1,0 +1,9 @@
+@use "../utilerias/variables";
+@use "../utilerias/mixins";
+@use "../layout/barranav";
+
+// margen de separacion de la navbar
+h1 {
+    @include mixins.propiedades_h1;
+}
+

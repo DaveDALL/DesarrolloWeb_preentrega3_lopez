@@ -1,0 +1,6 @@
+@use "../utilerias/variables";
+@use "../utilerias/mixins";
+
+.footer_item {
+    @include mixins.propiedades_footeritem;
+}

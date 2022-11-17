@@ -1,0 +1,6 @@
+@use "../utilerias/variables";
+@use "../utilerias/mixins";
+
+.formulario {
+    @include mixins.propiedades_formulario;
+}

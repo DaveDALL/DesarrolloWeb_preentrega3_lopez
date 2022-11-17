@@ -1,0 +1,37 @@
+@use "../utilerias/variables";
+@use "../utilerias/mixins";
+@use "../componentes/efectos";
+
+// ajuste de tamaño del carrusel despues de 800px
+@media (min-width:(((variables.$main_size)*8)+px)) {
+    #foto_galeria1 {
+        @include mixins.foto_galeria;
+    }
+}
+
+// Cambio de color en h5 de carrusel de pagina acerca
+h5 {
+    @include mixins.texto_fotocarrusel;
+    font: {
+        size: ((variables.$main_size)-70)+px;
+    }
+}
+
+// cambio de color en el mensaje del carrusel de la pagina acerca
+#acerca {
+    @include mixins.texto_fotocarrusel;
+    font: {
+        size: ((variables.$main_size)/5)+px;
+    }
+}
+
+// ajuste de tamaño del carrusel despues de 800px
+@media (min-width: (((variables.$main_size)*7)+px)) {
+    #video_galeria1 {
+        @include mixins.video_galeria;
+    }
+}
+
+
+
+
