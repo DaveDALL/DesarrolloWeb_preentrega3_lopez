@@ -118,13 +118,13 @@ h5 {
 }
 
 #card2 {
-  background-image: url(../../imags/card2.jpg);
+  background-image: url(../imags/card2.jpg);
   overflow: hidden;
   background-size: cover;
 }
 
 #card3 {
-  background-image: url(../../imags/card3.jpg);
+  background-image: url(../imags/card3.jpg);
   overflow: hidden;
   background-size: cover;
 }
@@ -206,7 +206,7 @@ h5 {
 }
 
 body {
-  background-image: url(../../imags/catdog.jpg);
+  background-image: url(../imags/catdog.jpg);
   background-repeat: repeat;
   overflow-x: hidden;
 }
